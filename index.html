@@ -70,18 +70,18 @@
 
         <div id="divDetails" style="background-color:white; width:100%; height:100%; position:absolute; top:0; visibility:hidden;">
             <table>
-                <tr style="width:100%; height:10vh; background-color:black; color:white;">
-                    <td onclick="btnBack_onClick()" style="width:10vw; text-align:center; border:1px solid grey;">
+                <tr style="width:100%; height:10vh; background-color:black; color:white; font-size:8vh;">
+                    <td onclick="btnBack_onClick()" style="width:15vw; text-align:center; border:1px solid grey;">
                         ←
                     </td>
-                    <td style="width:90vw; text-align:center;">
-                        <h2 id="detailsTitle">NOT</h2>
+                    <td style="width:85vw; text-align:center;">
+                        <label id="detailsTitle">NOT</label>
                     </td>
                 </tr>
             </table>
             
-            <form id="formNOT" onclick="result.value=(parseInt(a.innerHTML)+1)%2" style="font-size:3vw; display:none;">
-                <input type="button" value="    " style="background-color:#00FF00; border-radius:50%; border:6px solid black;" onclick="a.innerHTML = btnSwitch(this, parseInt(a.innerHTML))"/>
+            <form id="formNOT" onclick="result.value=(parseInt(a.innerHTML)+1)%2" style="display:none; text-align:center; margin:10vw; font-size:10vh;">
+                <input type="button" value="    " style="background-color:#00FF00; border-radius:50%; border:6px solid black; width:100px; height:100px;" onclick="a.innerHTML = btnSwitch(this, parseInt(a.innerHTML))"/>
                 <label id="a">0</label>
                 ------------------------------->
                 <output name="result">1</output>
