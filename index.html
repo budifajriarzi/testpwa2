@@ -75,16 +75,126 @@
                         <h1>←</h1>
                     </td>
                     <td style="width:85vw; text-align:center;">
-                        <h1 id="detailsTitle">NOT</h1>
+                        <h1 id="detailsTitle">Details Title</h1>
                     </td>
                 </tr>
             </table>
             
-            <form id="formNOT" onclick="result.value=(parseInt(a.innerHTML)+1)%2" style="display:none; text-align:center; margin:10vw;">
-                <input type="button" value="    " style="background-color:#00FF00; border-radius:50%; border:6px solid black; width:100px; height:100px;" onclick="a.innerHTML = btnSwitch(this, parseInt(a.innerHTML))"/>
-                <label id="a" style="font-size:40px;">0</label>
+            <form id="formNOT" onclick="resultNOT.value=(parseInt(aNOT.innerHTML)+1)%2" style="display:none; text-align:center; margin:10vw;">
+                <input type="button" value="    " style="background-color:#00FF00; border-radius:50%; border:6px solid black; width:100px; height:100px;" onclick="aNOT.innerHTML = btnSwitch(this, parseInt(aNOT.innerHTML))"/>
+                <label id="aNOT" style="font-size:40px;">0</label>
                 <span style="font-size:40px;">-------------------------------></span>
-                <output name="result" style="font-size:40px;">1</output>
+                <output name="resultNOT" style="font-size:40px;">1</output>
+            </form>
+            <form id="formAND" onclick="resultAND.value=parseInt(aAND.innerHTML)&parseInt(bAND.innerHTML)" style="display:none; text-align:center; margin:10vw;">
+                <table>
+                    <tr>
+                        <td>
+                            <input type="button" value="    " style="background-color:#00FF00; border-radius:50%; border:6px solid black; width:100px; height:100px;" onclick="aAND.innerHTML = btnSwitch(this, parseInt(aAND.innerHTML))"/>
+                            <label id="aAND" style="font-size:40px;">0</label>
+                        </td>
+                        <td rowspan="2">
+                            <span style="font-size:40px;">-------------------------------></span>
+                        </td>
+                        <td rowspan="2">
+                            <output name="resultAND" style="font-size:40px;">0</output>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="button" value="    " style="background-color:#00FF00; border-radius:50%; border:6px solid black; width:100px; height:100px;" onclick="bAND.innerHTML = btnSwitch(this, parseInt(bAND.innerHTML))"/>
+                            <label id="bAND" style="font-size:40px;">0</label>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+            <form id="formOR" onclick="resultOR.value=parseInt(aOR.innerHTML)|parseInt(bOR.innerHTML)" style="display:none; text-align:center; margin:10vw;">
+                <table>
+                    <tr>
+                        <td>
+                            <input type="button" value="    " style="background-color:#00FF00; border-radius:50%; border:6px solid black; width:100px; height:100px;" onclick="aOR.innerHTML = btnSwitch(this, parseInt(aOR.innerHTML))"/>
+                            <label id="aOR" style="font-size:40px;">0</label>
+                        </td>
+                        <td rowspan="2">
+                            <span style="font-size:40px;">-------------------------------></span>
+                        </td>
+                        <td rowspan="2">
+                            <output name="resultOR" style="font-size:40px;">0</output>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="button" value="    " style="background-color:#00FF00; border-radius:50%; border:6px solid black; width:100px; height:100px;" onclick="bOR.innerHTML = btnSwitch(this, parseInt(bOR.innerHTML))"/>
+                            <label id="bOR" style="font-size:40px;">0</label>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+            <form id="formNAND" onclick="resultNAND.value=((parseInt(aNAND.innerHTML)&parseInt(bNAND.innerHTML))+1)%2" style="display:none; text-align:center; margin:10vw;">
+                <table>
+                    <tr>
+                        <td>
+                            <input type="button" value="    " style="background-color:#00FF00; border-radius:50%; border:6px solid black; width:100px; height:100px;" onclick="aNAND.innerHTML = btnSwitch(this, parseInt(aNAND.innerHTML))"/>
+                            <label id="aNAND" style="font-size:40px;">0</label>
+                        </td>
+                        <td rowspan="2">
+                            <span style="font-size:40px;">-------------------------------></span>
+                        </td>
+                        <td rowspan="2">
+                            <output name="resultNAND" style="font-size:40px;">1</output>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="button" value="    " style="background-color:#00FF00; border-radius:50%; border:6px solid black; width:100px; height:100px;" onclick="bNAND.innerHTML = btnSwitch(this, parseInt(bNAND.innerHTML))"/>
+                            <label id="bNAND" style="font-size:40px;">0</label>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+            <form id="formNOR" onclick="resultNOR.value=((parseInt(aNOR.innerHTML)|parseInt(bNOR.innerHTML))+1)%2" style="display:none; text-align:center; margin:10vw;">
+                <table>
+                    <tr>
+                        <td>
+                            <input type="button" value="    " style="background-color:#00FF00; border-radius:50%; border:6px solid black; width:100px; height:100px;" onclick="aNOR.innerHTML = btnSwitch(this, parseInt(aNOR.innerHTML))"/>
+                            <label id="aNOR" style="font-size:40px;">0</label>
+                        </td>
+                        <td rowspan="2">
+                            <span style="font-size:40px;">-------------------------------></span>
+                        </td>
+                        <td rowspan="2">
+                            <output name="resultNOR" style="font-size:40px;">1</output>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="button" value="    " style="background-color:#00FF00; border-radius:50%; border:6px solid black; width:100px; height:100px;" onclick="bNOR.innerHTML = btnSwitch(this, parseInt(bNOR.innerHTML))"/>
+                            <label id="bNOR" style="font-size:40px;">0</label>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+            <form id="formX-OR" onclick="resultXOR.value=parseInt(aXOR.innerHTML)^parseInt(bXOR.innerHTML)" style="display:none; text-align:center; margin:10vw;">
+                <table>
+                    <tr>
+                        <td>
+                            <input type="button" value="    " style="background-color:#00FF00; border-radius:50%; border:6px solid black; width:100px; height:100px;" onclick="aXOR.innerHTML = btnSwitch(this, parseInt(aXOR.innerHTML));"/>
+                            <label id="aXOR" style="font-size:40px;">0</label>
+                        </td>
+                        <td rowspan="2">
+                            <span style="font-size:40px;">-------------------------------></span>
+                        </td>
+                        <td rowspan="2">
+                            <output name="resultXOR" style="font-size:40px;">0</output>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="button" value="    " style="background-color:#00FF00; border-radius:50%; border:6px solid black; width:100px; height:100px;" onclick="bXOR.innerHTML = btnSwitch(this, parseInt(bXOR.innerHTML))"/>
+                            <label id="bXOR" style="font-size:40px;">0</label>
+                        </td>
+                    </tr>
+                </table>
             </form>
         </div>
     </body>
